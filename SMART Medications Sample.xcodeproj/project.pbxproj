@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE249A7215D5BD19001A63D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE249A7115D5BD19001A63D7 /* UIKit.framework */; };
+		EE249A7415D5BD19001A63D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE249A7315D5BD19001A63D7 /* Foundation.framework */; };
+		EE249A7615D5BD19001A63D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE249A7515D5BD19001A63D7 /* CoreGraphics.framework */; };
+		EE249A7C15D5BD19001A63D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE249A7A15D5BD19001A63D7 /* InfoPlist.strings */; };
+		EE249A7E15D5BD19001A63D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE249A7D15D5BD19001A63D7 /* main.m */; };
+		EE249A8215D5BD19001A63D7 /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE249A8115D5BD19001A63D7 /* SMAppDelegate.m */; };
+		EE249A8515D5BD19001A63D7 /* MedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE249A8415D5BD19001A63D7 /* MedListViewController.m */; };
+		EE249A8E15D5BD19001A63D7 /* MedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE249A8C15D5BD19001A63D7 /* MedViewController.xib */; };
+		EE249A9515D5BF1E001A63D7 /* libSMART.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE249A9415D5BF1D001A63D7 /* libSMART.a */; };
+		EE249AA315D5C7D9001A63D7 /* MedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE249AA215D5C7D9001A63D7 /* MedViewController.m */; };
+		EE249AA515D5C955001A63D7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE249AA415D5C955001A63D7 /* Security.framework */; };
+		EE249AC515D5CD56001A63D7 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EE249AC415D5CD56001A63D7 /* libxml2.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EE249A6D15D5BD19001A63D7 /* SMART Medications Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMART Medications Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE249A7115D5BD19001A63D7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EE249A7315D5BD19001A63D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EE249A7515D5BD19001A63D7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EE249A7915D5BD19001A63D7 /* SMART Medications Sample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SMART Medications Sample-Info.plist"; sourceTree = "<group>"; };
+		EE249A7B15D5BD19001A63D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EE249A7D15D5BD19001A63D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE249A7F15D5BD19001A63D7 /* SMART Medications Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMART Medications Sample-Prefix.pch"; sourceTree = "<group>"; };
+		EE249A8015D5BD19001A63D7 /* SMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMAppDelegate.h; sourceTree = "<group>"; };
+		EE249A8115D5BD19001A63D7 /* SMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMAppDelegate.m; sourceTree = "<group>"; };
+		EE249A8315D5BD19001A63D7 /* MedListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedListViewController.h; sourceTree = "<group>"; };
+		EE249A8415D5BD19001A63D7 /* MedListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedListViewController.m; sourceTree = "<group>"; };
+		EE249A8D15D5BD19001A63D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MedViewController.xib; sourceTree = "<group>"; };
+		EE249A9415D5BF1D001A63D7 /* libSMART.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSMART.a; path = "../SMARTFramework/build/Release-iphoneos/libSMART.a"; sourceTree = "<group>"; };
+		EE249A9615D5C03F001A63D7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		EE249AA115D5C7D9001A63D7 /* MedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedViewController.h; sourceTree = "<group>"; };
+		EE249AA215D5C7D9001A63D7 /* MedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedViewController.m; sourceTree = "<group>"; };
+		EE249AA415D5C955001A63D7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EE249AC415D5CD56001A63D7 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE249A6A15D5BD19001A63D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE249AC515D5CD56001A63D7 /* libxml2.dylib in Frameworks */,
+				EE249AA515D5C955001A63D7 /* Security.framework in Frameworks */,
+				EE249A9515D5BF1E001A63D7 /* libSMART.a in Frameworks */,
+				EE249A7215D5BD19001A63D7 /* UIKit.framework in Frameworks */,
+				EE249A7415D5BD19001A63D7 /* Foundation.framework in Frameworks */,
+				EE249A7615D5BD19001A63D7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE249A6215D5BD19001A63D7 = {
+			isa = PBXGroup;
+			children = (
+				EE249A9615D5C03F001A63D7 /* README.md */,
+				EE249A7715D5BD19001A63D7 /* SMART Medications Sample */,
+				EE249A7015D5BD19001A63D7 /* Frameworks */,
+				EE249A6E15D5BD19001A63D7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE249A6E15D5BD19001A63D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE249A6D15D5BD19001A63D7 /* SMART Medications Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE249A7015D5BD19001A63D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE249A7115D5BD19001A63D7 /* UIKit.framework */,
+				EE249A7315D5BD19001A63D7 /* Foundation.framework */,
+				EE249A7515D5BD19001A63D7 /* CoreGraphics.framework */,
+				EE249AA415D5C955001A63D7 /* Security.framework */,
+				EE249A9415D5BF1D001A63D7 /* libSMART.a */,
+				EE249AC415D5CD56001A63D7 /* libxml2.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE249A7715D5BD19001A63D7 /* SMART Medications Sample */ = {
+			isa = PBXGroup;
+			children = (
+				EE249A8015D5BD19001A63D7 /* SMAppDelegate.h */,
+				EE249A8115D5BD19001A63D7 /* SMAppDelegate.m */,
+				EE249A8315D5BD19001A63D7 /* MedListViewController.h */,
+				EE249A8415D5BD19001A63D7 /* MedListViewController.m */,
+				EE249AA115D5C7D9001A63D7 /* MedViewController.h */,
+				EE249AA215D5C7D9001A63D7 /* MedViewController.m */,
+				EE249A8C15D5BD19001A63D7 /* MedViewController.xib */,
+				EE249A7815D5BD19001A63D7 /* Supporting Files */,
+			);
+			path = "SMART Medications Sample";
+			sourceTree = "<group>";
+		};
+		EE249A7815D5BD19001A63D7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE249A7915D5BD19001A63D7 /* SMART Medications Sample-Info.plist */,
+				EE249A7A15D5BD19001A63D7 /* InfoPlist.strings */,
+				EE249A7D15D5BD19001A63D7 /* main.m */,
+				EE249A7F15D5BD19001A63D7 /* SMART Medications Sample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE249A6C15D5BD19001A63D7 /* SMART Medications Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE249A9115D5BD19001A63D7 /* Build configuration list for PBXNativeTarget "SMART Medications Sample" */;
+			buildPhases = (
+				EE249A6915D5BD19001A63D7 /* Sources */,
+				EE249A6A15D5BD19001A63D7 /* Frameworks */,
+				EE249A6B15D5BD19001A63D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SMART Medications Sample";
+			productName = "SMART Medications Sample";
+			productReference = EE249A6D15D5BD19001A63D7 /* SMART Medications Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE249A6415D5BD19001A63D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SM;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "CHIP, Boston Children's Hospital";
+			};
+			buildConfigurationList = EE249A6715D5BD19001A63D7 /* Build configuration list for PBXProject "SMART Medications Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EE249A6215D5BD19001A63D7;
+			productRefGroup = EE249A6E15D5BD19001A63D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE249A6C15D5BD19001A63D7 /* SMART Medications Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE249A6B15D5BD19001A63D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE249A7C15D5BD19001A63D7 /* InfoPlist.strings in Resources */,
+				EE249A8E15D5BD19001A63D7 /* MedViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE249A6915D5BD19001A63D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE249A7E15D5BD19001A63D7 /* main.m in Sources */,
+				EE249A8215D5BD19001A63D7 /* SMAppDelegate.m in Sources */,
+				EE249A8515D5BD19001A63D7 /* MedListViewController.m in Sources */,
+				EE249AA315D5C7D9001A63D7 /* MedViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE249A7A15D5BD19001A63D7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE249A7B15D5BD19001A63D7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EE249A8C15D5BD19001A63D7 /* MedViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE249A8D15D5BD19001A63D7 /* en */,
+			);
+			name = MedViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE249A8F15D5BD19001A63D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE249A9015D5BD19001A63D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE249A9215D5BD19001A63D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SMART Medications Sample/SMART Medications Sample-Prefix.pch";
+				INFOPLIST_FILE = "SMART Medications Sample/SMART Medications Sample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Redland-ObjC/Redland-source/Universal\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EE249A9315D5BD19001A63D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SMART Medications Sample/SMART Medications Sample-Prefix.pch";
+				INFOPLIST_FILE = "SMART Medications Sample/SMART Medications Sample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Redland-ObjC/Redland-source/Universal\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE249A6715D5BD19001A63D7 /* Build configuration list for PBXProject "SMART Medications Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE249A8F15D5BD19001A63D7 /* Debug */,
+				EE249A9015D5BD19001A63D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE249A9115D5BD19001A63D7 /* Build configuration list for PBXNativeTarget "SMART Medications Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE249A9215D5BD19001A63D7 /* Debug */,
+				EE249A9315D5BD19001A63D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE249A6415D5BD19001A63D7 /* Project object */;
+}
