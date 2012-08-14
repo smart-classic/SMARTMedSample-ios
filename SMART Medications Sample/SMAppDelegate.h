@@ -21,11 +21,12 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "SMServer.h"
 
 @class SMServer;
 
 
-@interface SMAppDelegate : UIResponder <UIApplicationDelegate>
+@interface SMAppDelegate : UIResponder <UIApplicationDelegate, SMARTServerDelegate>
 
 @property (nonatomic, readonly, strong) SMServer *smart;
 @property (nonatomic, strong) UIWindow *window;

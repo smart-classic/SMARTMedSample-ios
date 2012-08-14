@@ -86,41 +86,46 @@
 - (void)selectRecord:(id)sender
 {
 	// create an activity indicator to show that something is happening
-	UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-	UIBarButtonItem *activityButton = [[UIBarButtonItem alloc] initWithCustomView:activityView];
-	[activityButton setTarget:self];
-	[activityButton setAction:@selector(cancelSelection:)];
-	self.navigationItem.leftBarButtonItem = activityButton;
-	[activityView startAnimating];
-	
-	// select record
-	[APP_DELEGATE.smart selectRecord:^(BOOL userDidCancel, NSString *errorMessage) {
+	if (APP_DELEGATE.smart) {
+		UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+		UIBarButtonItem *activityButton = [[UIBarButtonItem alloc] initWithCustomView:activityView];
+		[activityButton setTarget:self];
+		[activityButton setAction:@selector(cancelSelection:)];
+		self.navigationItem.leftBarButtonItem = activityButton;
+		[activityView startAnimating];
 		
-		// there was an error selecting the record
-		if (errorMessage) {
-//			[self setRecordButtonTitle:[activeRecord label]];
-			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed to connect"
-															message:errorMessage
-														   delegate:nil
-												  cancelButtonTitle:@"OK"
-												  otherButtonTitles:nil];
-			[alert show];
-		}
-		
-		// successfully selected record, fetch medications
-		else if (!userDidCancel) {
-			self.activeRecord = [APP_DELEGATE.smart activeRecord];
-//			[self setRecordButtonTitle:[activeRecord label]];
-			self.navigationItem.rightBarButtonItem.enabled = (nil != self.activeRecord);
+		// select record
+		[APP_DELEGATE.smart selectRecord:^(BOOL userDidCancel, NSString *errorMessage) {
 			
-			/// @todo Fetch medications here
-		}
-		
-		// cancelled
-		else {
-			[self setRecordButtonTitle:nil];
-		}
-	}];
+			// there was an error selecting the record
+			if (errorMessage) {
+				[self setRecordButtonTitle:activeRecord.name];
+				
+				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed to connect"
+																message:errorMessage
+															   delegate:nil
+													  cancelButtonTitle:@"OK"
+													  otherButtonTitles:nil];
+				[alert show];
+			}
+			
+			// successfully selected record, fetch medications
+			else if (!userDidCancel) {
+				self.activeRecord = [APP_DELEGATE.smart activeRecord];
+				[self setRecordButtonTitle:activeRecord.name];
+				
+				/// @todo Fetch medications here
+			}
+			
+			// cancelled
+			else {
+				[self setRecordButtonTitle:nil];
+			}
+		}];
+	}
+	else {
+		DLog(@"The server instance is missing");
+	}
 }
 
 /**

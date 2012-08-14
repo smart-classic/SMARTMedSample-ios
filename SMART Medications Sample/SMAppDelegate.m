@@ -40,8 +40,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	// create the handle to our server
+	self.smart = [SMServer serverWithDelegate:self];
+	
+	// create the UI
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
 
 	self.listController = [[MedListViewController alloc] initWithStyle:UITableViewStylePlain];
 	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:listController];
