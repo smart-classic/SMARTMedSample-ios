@@ -47,7 +47,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
 	self.listController = [[MedListViewController alloc] initWithStyle:UITableViewStylePlain];
-	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:listController];
+	UINavigationController *naviController = [[UINavigationController alloc] initWithRootViewController:listController];
+	naviController.navigationBar.tintColor = [UIColor colorWithRed:0.42f green:0.69f blue:0.83f alpha:1.f];
+	
+	self.window.rootViewController = naviController;
     [self.window makeKeyAndVisible];
 	
     return YES;
