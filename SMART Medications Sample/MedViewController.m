@@ -21,7 +21,8 @@
  */
 
 #import "MedViewController.h"
-#import "SMARTDocuments.h"
+#import "SMARTObjects.h"
+
 
 @interface MedViewController ()
 

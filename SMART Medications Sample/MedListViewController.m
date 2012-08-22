@@ -24,8 +24,8 @@
 #import "SMAppDelegate.h"
 #import "MedViewController.h"
 #import "SMServer.h"
-#import "SMRecord.h"
-#import "SMARTDocuments.h"
+#import "SMRecord+Calls.h"
+#import "SMARTObjects.h"
 
 
 @interface MedListViewController ()
@@ -69,7 +69,7 @@
 
 #pragma mark - Record Handling
 /**
- *	Called when the user logged out
+ *  Called when the user logged out
  */
 - (void)unloadData
 {
@@ -81,7 +81,7 @@
 }
 
 /**
- *	Connecting to the server retrieves the records of your users account
+ *  Connecting to the server retrieves the records of your users account
  */
 - (void)selectRecord:(id)sender
 {
@@ -100,13 +100,7 @@
 			// there was an error selecting the record
 			if (errorMessage) {
 				[self setRecordButtonTitle:activeRecord.name];
-				
-				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed to connect"
-																message:errorMessage
-															   delegate:nil
-													  cancelButtonTitle:@"OK"
-													  otherButtonTitles:nil];
-				[alert show];
+				SHOW_ALERT(@"Failed to connect", errorMessage)
 			}
 			
 			// successfully selected record, fetch medications
@@ -114,7 +108,19 @@
 				self.activeRecord = [APP_DELEGATE.smart activeRecord];
 				[self setRecordButtonTitle:activeRecord.name];
 				
-				/// @todo Fetch medications here
+				[APP_DELEGATE.smart.activeRecord getMedications:^(BOOL success, NSDictionary *userInfo) {
+					if (!success) {
+						SHOW_ALERT(@"Error retrieving medications", [[userInfo objectForKey:INErrorKey] localizedDescription])
+					}
+					else {
+						
+						// success, got the medications
+						NSArray *med_array = [userInfo objectForKey:INResponseArrayKey];
+						for (SMMedication *med in med_array) {
+							DLog(@"%@:  %@ %@, Fulfilments: %@", med.drugName.title, med.frequency.value, med.frequency.unit, med.fulfillment);
+						}
+					}
+				}];
 			}
 			
 			// cancelled
@@ -129,7 +135,7 @@
 }
 
 /**
- *	Cancels current connection attempt
+ *  Cancels current connection attempt
  */
 - (void)cancelSelection:(id)sender
 {
@@ -138,7 +144,7 @@
 }
 
 /**
- *	Reverts the navigation bar "connect" button
+ *  Reverts the navigation bar "connect" button
  */
 - (void)setRecordButtonTitle:(NSString *)aTitle
 {
@@ -151,7 +157,7 @@
 
 #pragma mark - Medication Handling
 /**
- *	Called when the user taps a medication row, shows the details for the selected medication
+ *  Called when the user taps a medication row, shows the details for the selected medication
  */
 - (void)showMedication:(SMMedication *)aMedication animated:(BOOL)animated
 {

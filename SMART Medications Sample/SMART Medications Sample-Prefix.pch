@@ -26,3 +26,10 @@
 
 // Make error reporting easy
 #define ERR(p, s, c) if (p != NULL && s) { *p = [NSError errorWithDomain:NSCocoaErrorDomain code:c userInfo:[NSDictionary dictionaryWithObject:s forKey:NSLocalizedDescriptionKey]]; }
+
+#define SHOW_ALERT(title, text) UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title \
+	message:text \
+	delegate:nil \
+	cancelButtonTitle:@"OK" \
+	otherButtonTitles:nil]; \
+	[alert show];
