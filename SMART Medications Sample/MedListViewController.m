@@ -115,10 +115,8 @@
 					else {
 						
 						// success, got the medications
-						NSArray *med_array = [userInfo objectForKey:INResponseArrayKey];
-						for (SMMedication *med in med_array) {
-							DLog(@"%@:  %@ %@, Fulfilments: %@", med.drugName.title, med.frequency.value, med.frequency.unit, med.fulfillment);
-						}
+						self.meds = [userInfo objectForKey:INResponseArrayKey];
+						[self.tableView reloadData];
 					}
 				}];
 			}
@@ -191,12 +189,13 @@
 	if (0 == indexPath.section && [meds count] > indexPath.row) {
 		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 		if (cell == nil) {
-			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
 		}
 		
 		// display the name
 		SMMedication *med = [meds objectAtIndex:indexPath.row];
-		cell.textLabel.text = [med description];
+		cell.textLabel.text = med.drugName.title;
+		cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", med.frequency.value, med.frequency.unit];
 		return cell;
 	}
 	return nil;

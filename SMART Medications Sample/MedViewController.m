@@ -58,8 +58,9 @@
 - (void)configureView
 {
 	if (self.medication) {
-//		self.nameLabel.text = medication.drugName.title;
-//	    self.codeLabel.text = [NSString stringWithFormat:@"RxNorm: %@", ([medication.drugName.identifier length] > 0) ? medication.drugName.identifier : @"unknown"];
+		self.nameLabel.text = medication.drugName.title;
+		NSString *rxcode = medication.drugName.code.identifier;
+	    self.codeLabel.text = [NSString stringWithFormat:@"RxNorm: %@", ([rxcode length] > 0) ? rxcode : @"unknown"];
 	}
 }
 
