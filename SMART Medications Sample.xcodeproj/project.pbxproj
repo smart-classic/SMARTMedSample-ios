@@ -268,7 +268,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../Redland-ObjC/Redland-source/Universal\"",
+					"\"$(SRCROOT)/Redland-ObjC/Redland-source/Universal\"",
 				);
 				OTHER_CFLAGS = "-DDEBUG";
 				OTHER_LDFLAGS = "-ObjC";
@@ -287,7 +287,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../Redland-ObjC/Redland-source/Universal\"",
+					"\"$(SRCROOT)/Redland-ObjC/Redland-source/Universal\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
