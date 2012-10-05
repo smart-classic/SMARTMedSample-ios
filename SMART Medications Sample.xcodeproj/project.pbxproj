@@ -41,6 +41,7 @@
 		EE249AA215D5C7D9001A63D7 /* MedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedViewController.m; sourceTree = "<group>"; };
 		EE249AA415D5C955001A63D7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EE249AC415D5CD56001A63D7 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		EEEFE7F2160391260022B7A6 /* SMART Medications Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SMART Medications Sample.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 		EE249A7715D5BD19001A63D7 /* SMART Medications Sample */ = {
 			isa = PBXGroup;
 			children = (
+				EEEFE7F2160391260022B7A6 /* SMART Medications Sample.entitlements */,
 				EE249A8015D5BD19001A63D7 /* SMAppDelegate.h */,
 				EE249A8115D5BD19001A63D7 /* SMAppDelegate.m */,
 				EE249A8315D5BD19001A63D7 /* MedListViewController.h */,
