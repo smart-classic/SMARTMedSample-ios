@@ -19,6 +19,9 @@
 		EE249AA315D5C7D9001A63D7 /* MedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE249AA215D5C7D9001A63D7 /* MedViewController.m */; };
 		EE249AA515D5C955001A63D7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE249AA415D5C955001A63D7 /* Security.framework */; };
 		EE249AC515D5CD56001A63D7 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EE249AC415D5CD56001A63D7 /* libxml2.dylib */; };
+		EEDD4661162EA48100ECA308 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEDD4660162EA48100ECA308 /* Default-568h@2x.png */; };
+		EEDD4664162EA48700ECA308 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EEDD4663162EA48700ECA308 /* Default.png */; };
+		EEDD4666162EA48C00ECA308 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEDD4665162EA48C00ECA308 /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		EE249AA215D5C7D9001A63D7 /* MedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedViewController.m; sourceTree = "<group>"; };
 		EE249AA415D5C955001A63D7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EE249AC415D5CD56001A63D7 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		EEDD4660162EA48100ECA308 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		EEDD4663162EA48700ECA308 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		EEDD4665162EA48C00ECA308 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		EEEFE7F2160391260022B7A6 /* SMART Medications Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SMART Medications Sample.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +121,9 @@
 				EE249A7A15D5BD19001A63D7 /* InfoPlist.strings */,
 				EE249A7D15D5BD19001A63D7 /* main.m */,
 				EE249A7F15D5BD19001A63D7 /* SMART Medications Sample-Prefix.pch */,
+				EEDD4665162EA48C00ECA308 /* Default@2x.png */,
+				EEDD4663162EA48700ECA308 /* Default.png */,
+				EEDD4660162EA48100ECA308 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -173,6 +182,9 @@
 			files = (
 				EE249A7C15D5BD19001A63D7 /* InfoPlist.strings in Resources */,
 				EE249A8E15D5BD19001A63D7 /* MedViewController.xib in Resources */,
+				EEDD4661162EA48100ECA308 /* Default-568h@2x.png in Resources */,
+				EEDD4664162EA48700ECA308 /* Default.png in Resources */,
+				EEDD4666162EA48C00ECA308 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

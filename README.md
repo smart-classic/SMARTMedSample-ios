@@ -3,6 +3,8 @@ SMART Medications Sample
 
 This is a simple sample App to demonstrate basic usage of SMART's [iOS framework][framework]. The interesting parts are:
 
+[framework]: https://github.com/chb/SMARTFramework-ios
+
 
 Registering the App with your SMART container
 ---------------------------------------------
