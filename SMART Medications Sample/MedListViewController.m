@@ -40,7 +40,6 @@
 
 @implementation MedListViewController
 
-@synthesize activeRecord, meds;
 
 
 #pragma mark - View Handling
@@ -99,14 +98,12 @@
 			
 			// there was an error selecting the record
 			if (errorMessage) {
-				[self setRecordButtonTitle:activeRecord.name];
 				SHOW_ALERT(@"Failed to connect", errorMessage)
 			}
 			
 			// successfully selected record, fetch medications
 			else if (!userDidCancel) {
 				self.activeRecord = [APP_DELEGATE.smart activeRecord];
-				[self setRecordButtonTitle:activeRecord.name];
 				
 				[APP_DELEGATE.smart.activeRecord getMedications:^(BOOL success, NSDictionary *userInfo) {
 					if (!success) {
@@ -123,8 +120,9 @@
 			
 			// cancelled
 			else {
-				[self setRecordButtonTitle:nil];
 			}
+			
+			[self setRecordButtonTitle:_activeRecord.name];
 		}];
 	}
 	else {
@@ -177,7 +175,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 	if (0 == section) {
-		return [meds count];
+		return [_meds count];
 	}
     return 0;
 }
@@ -186,14 +184,14 @@
 {
     static NSString *CellIdentifier = @"Cell";
     
-	if (0 == indexPath.section && [meds count] > indexPath.row) {
+	if (0 == indexPath.section && [_meds count] > indexPath.row) {
 		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 		if (cell == nil) {
 			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
 		}
 		
 		// display the name
-		SMMedication *med = [meds objectAtIndex:indexPath.row];
+		SMMedication *med = [_meds objectAtIndex:indexPath.row];
 		cell.textLabel.text = med.drugName.title;
 		cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", med.frequency.value, med.frequency.unit];
 		return cell;
@@ -206,11 +204,11 @@
 #pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	if (0 != indexPath.section || indexPath.row >= [meds count]) {
+	if (0 != indexPath.section || indexPath.row >= [_meds count]) {
 		return;
 	}
 	
-	SMMedication *selected = [meds objectAtIndex:indexPath.row];
+	SMMedication *selected = [_meds objectAtIndex:indexPath.row];
     [self showMedication:selected animated:YES];
 }
 
