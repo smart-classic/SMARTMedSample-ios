@@ -91,10 +91,10 @@
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug">
+      buildConfiguration = "Debug+Static">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Deployment"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
