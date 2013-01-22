@@ -107,12 +107,12 @@
 				
 				[APP_DELEGATE.smart.activeRecord getMedications:^(BOOL success, NSDictionary *userInfo) {
 					if (!success) {
-						SHOW_ALERT(@"Error retrieving medications", [[userInfo objectForKey:INErrorKey] localizedDescription])
+						SHOW_ALERT(@"Error retrieving medications", [[userInfo objectForKey:SMARTErrorKey] localizedDescription])
 					}
 					else {
 						
 						// success, got the medications
-						self.meds = [userInfo objectForKey:INResponseArrayKey];
+						self.meds = [userInfo objectForKey:SMARTResponseArrayKey];
 						[self.tableView reloadData];
 					}
 				}];
