@@ -281,6 +281,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMART Medications Sample/SMART Medications Sample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/..\"/**";
 				INFOPLIST_FILE = "SMART Medications Sample/SMART Medications Sample-Info.plist";
 				OTHER_CFLAGS = "-DDEBUG";
 				OTHER_LDFLAGS = "-ObjC";
@@ -295,6 +296,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMART Medications Sample/SMART Medications Sample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/..\"/**";
 				INFOPLIST_FILE = "SMART Medications Sample/SMART Medications Sample-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -333,6 +335,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMART Medications Sample/SMART Medications Sample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/..\"/**";
 				INFOPLIST_FILE = "SMART Medications Sample/SMART Medications Sample-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
