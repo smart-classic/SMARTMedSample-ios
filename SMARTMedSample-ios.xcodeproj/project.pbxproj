@@ -10,7 +10,6 @@
 		EE249A7215D5BD19001A63D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE249A7115D5BD19001A63D7 /* UIKit.framework */; };
 		EE249A7415D5BD19001A63D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE249A7315D5BD19001A63D7 /* Foundation.framework */; };
 		EE249A7615D5BD19001A63D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE249A7515D5BD19001A63D7 /* CoreGraphics.framework */; };
-		EE249A7C15D5BD19001A63D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE249A7A15D5BD19001A63D7 /* InfoPlist.strings */; };
 		EE249A7E15D5BD19001A63D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE249A7D15D5BD19001A63D7 /* main.m */; };
 		EE249A8215D5BD19001A63D7 /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE249A8115D5BD19001A63D7 /* SMAppDelegate.m */; };
 		EE249A8515D5BD19001A63D7 /* MedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE249A8415D5BD19001A63D7 /* MedListViewController.m */; };
@@ -29,10 +28,9 @@
 		EE249A7115D5BD19001A63D7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EE249A7315D5BD19001A63D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE249A7515D5BD19001A63D7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EE249A7915D5BD19001A63D7 /* SMART Medications Sample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SMART Medications Sample-Info.plist"; sourceTree = "<group>"; };
-		EE249A7B15D5BD19001A63D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EE249A7915D5BD19001A63D7 /* SMARTMedSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SMARTMedSample-Info.plist"; sourceTree = "<group>"; };
 		EE249A7D15D5BD19001A63D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EE249A7F15D5BD19001A63D7 /* SMART Medications Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMART Medications Sample-Prefix.pch"; sourceTree = "<group>"; };
+		EE249A7F15D5BD19001A63D7 /* SMARTMedSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMARTMedSample-Prefix.pch"; sourceTree = "<group>"; };
 		EE249A8015D5BD19001A63D7 /* SMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMAppDelegate.h; sourceTree = "<group>"; };
 		EE249A8115D5BD19001A63D7 /* SMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMAppDelegate.m; sourceTree = "<group>"; };
 		EE249A8315D5BD19001A63D7 /* MedListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedListViewController.h; sourceTree = "<group>"; };
@@ -48,7 +46,7 @@
 		EEDD4660162EA48100ECA308 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		EEDD4663162EA48700ECA308 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		EEDD4665162EA48C00ECA308 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		EEEFE7F2160391260022B7A6 /* SMART Medications Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SMART Medications Sample.entitlements"; sourceTree = "<group>"; };
+		EEEFE7F2160391260022B7A6 /* SMARTMedSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SMARTMedSample.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +101,7 @@
 		EE249A7715D5BD19001A63D7 /* SMART Medications Sample */ = {
 			isa = PBXGroup;
 			children = (
-				EEEFE7F2160391260022B7A6 /* SMART Medications Sample.entitlements */,
+				EEEFE7F2160391260022B7A6 /* SMARTMedSample.entitlements */,
 				EE249A8015D5BD19001A63D7 /* SMAppDelegate.h */,
 				EE249A8115D5BD19001A63D7 /* SMAppDelegate.m */,
 				EE249A8315D5BD19001A63D7 /* MedListViewController.h */,
@@ -113,16 +111,16 @@
 				EE249A8C15D5BD19001A63D7 /* MedViewController.xib */,
 				EE249A7815D5BD19001A63D7 /* Supporting Files */,
 			);
-			path = "SMART Medications Sample";
+			name = "SMART Medications Sample";
+			path = SMARTMedSample;
 			sourceTree = "<group>";
 		};
 		EE249A7815D5BD19001A63D7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EE249A7915D5BD19001A63D7 /* SMART Medications Sample-Info.plist */,
-				EE249A7A15D5BD19001A63D7 /* InfoPlist.strings */,
+				EE249A7915D5BD19001A63D7 /* SMARTMedSample-Info.plist */,
 				EE249A7D15D5BD19001A63D7 /* main.m */,
-				EE249A7F15D5BD19001A63D7 /* SMART Medications Sample-Prefix.pch */,
+				EE249A7F15D5BD19001A63D7 /* SMARTMedSample-Prefix.pch */,
 				EEDD4665162EA48C00ECA308 /* Default@2x.png */,
 				EEDD4663162EA48700ECA308 /* Default.png */,
 				EEDD4660162EA48100ECA308 /* Default-568h@2x.png */,
@@ -160,7 +158,7 @@
 				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "CHIP, Boston Children's Hospital";
 			};
-			buildConfigurationList = EE249A6715D5BD19001A63D7 /* Build configuration list for PBXProject "SMART Medications Sample" */;
+			buildConfigurationList = EE249A6715D5BD19001A63D7 /* Build configuration list for PBXProject "SMARTMedSample-ios" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -182,7 +180,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE249A7C15D5BD19001A63D7 /* InfoPlist.strings in Resources */,
 				EE249A8E15D5BD19001A63D7 /* MedViewController.xib in Resources */,
 				EEDD4661162EA48100ECA308 /* Default-568h@2x.png in Resources */,
 				EEDD4664162EA48700ECA308 /* Default.png in Resources */,
@@ -207,14 +204,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EE249A7A15D5BD19001A63D7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EE249A7B15D5BD19001A63D7 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		EE249A8C15D5BD19001A63D7 /* MedViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -280,13 +269,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SMART Medications Sample/SMART Medications Sample-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/..\"/**";
-				INFOPLIST_FILE = "SMART Medications Sample/SMART Medications Sample-Info.plist";
+				GCC_PREFIX_HEADER = "SMARTMedSample/SMARTMedSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)\"/**";
+				INFOPLIST_FILE = "$(SRCROOT)/SMARTMedSample/SMARTMedSample-Info.plist";
 				OTHER_CFLAGS = "-DDEBUG";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/..\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -295,12 +284,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SMART Medications Sample/SMART Medications Sample-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/..\"/**";
-				INFOPLIST_FILE = "SMART Medications Sample/SMART Medications Sample-Info.plist";
+				GCC_PREFIX_HEADER = "SMARTMedSample/SMARTMedSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)\"/**";
+				INFOPLIST_FILE = "$(SRCROOT)/SMARTMedSample/SMARTMedSample-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/..\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -334,12 +323,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SMART Medications Sample/SMART Medications Sample-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/..\"/**";
-				INFOPLIST_FILE = "SMART Medications Sample/SMART Medications Sample-Info.plist";
+				GCC_PREFIX_HEADER = "SMARTMedSample/SMARTMedSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)\"/**";
+				INFOPLIST_FILE = "$(SRCROOT)/SMARTMedSample/SMARTMedSample-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/..\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Deployment;
@@ -347,7 +336,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EE249A6715D5BD19001A63D7 /* Build configuration list for PBXProject "SMART Medications Sample" */ = {
+		EE249A6715D5BD19001A63D7 /* Build configuration list for PBXProject "SMARTMedSample-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE249A8F15D5BD19001A63D7 /* Debug */,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0440"
+   LastUpgradeVersion = "0460"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,21 +17,7 @@
                BlueprintIdentifier = "EE249A6C15D5BD19001A63D7"
                BuildableName = "SMART Medications Sample.app"
                BlueprintName = "SMART Medications Sample"
-               ReferencedContainer = "container:SMART Medications Sample.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EEC9C59415CB2EA800B7C568"
-               BuildableName = "libSMART.a"
-               BlueprintName = "SMART"
-               ReferencedContainer = "container:../SMARTFramework/SMARTFramework.xcodeproj">
+               ReferencedContainer = "container:SMARTMedSample-ios.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +35,7 @@
             BlueprintIdentifier = "EE249A6C15D5BD19001A63D7"
             BuildableName = "SMART Medications Sample.app"
             BlueprintName = "SMART Medications Sample"
-            ReferencedContainer = "container:SMART Medications Sample.xcodeproj">
+            ReferencedContainer = "container:SMARTMedSample-ios.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -68,7 +54,7 @@
             BlueprintIdentifier = "EE249A6C15D5BD19001A63D7"
             BuildableName = "SMART Medications Sample.app"
             BlueprintName = "SMART Medications Sample"
-            ReferencedContainer = "container:SMART Medications Sample.xcodeproj">
+            ReferencedContainer = "container:SMARTMedSample-ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -86,15 +72,15 @@
             BlueprintIdentifier = "EE249A6C15D5BD19001A63D7"
             BuildableName = "SMART Medications Sample.app"
             BlueprintName = "SMART Medications Sample"
-            ReferencedContainer = "container:SMART Medications Sample.xcodeproj">
+            ReferencedContainer = "container:SMARTMedSample-ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug+Static">
+      buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Deployment"
+      buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
