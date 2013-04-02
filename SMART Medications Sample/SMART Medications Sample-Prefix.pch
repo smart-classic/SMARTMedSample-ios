@@ -25,7 +25,7 @@
 #define ALog(fmt, ...) NSLog((@"%s (line %d) " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 
 // Make error reporting easy
-#define ERR(p, s, c) if (p != NULL && s) { *p = [NSError errorWithDomain:NSCocoaErrorDomain code:c userInfo:[NSDictionary dictionaryWithObject:s forKey:NSLocalizedDescriptionKey]]; }
+#define ERR(p, s, c) if (p != NULL && s) { *p = [NSError errorWithDomain:NSCocoaErrorDomain code:c userInfo:@{NSLocalizedDescriptionKey: s}]; }
 
 #define SHOW_ALERT(title, text) UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title \
 	message:text \
