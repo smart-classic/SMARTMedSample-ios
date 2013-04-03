@@ -105,7 +105,7 @@
 			else if (!userDidCancel) {
 				self.activeRecord = [APP_DELEGATE.smart activeRecord];
 				
-				[APP_DELEGATE.smart.activeRecord getMedications:^(BOOL success, NSDictionary *userInfo) {
+				[_activeRecord getMedications:^(BOOL success, NSDictionary *userInfo) {
 					if (!success) {
 						SHOW_ALERT(@"Error retrieving medications", [[userInfo objectForKey:SMARTErrorKey] localizedDescription])
 					}
