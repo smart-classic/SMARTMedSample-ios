@@ -84,8 +84,10 @@
  */
 - (void)selectRecord:(id)sender
 {
+	SMServer *smart = APP_DELEGATE.smart;
+	
 	// create an activity indicator to show that something is happening
-	if (APP_DELEGATE.smart) {
+	if (smart) {
 		UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
 		UIBarButtonItem *activityButton = [[UIBarButtonItem alloc] initWithCustomView:activityView];
 		[activityButton setTarget:self];
@@ -94,27 +96,33 @@
 		[activityView startAnimating];
 		
 		// select record
-		[APP_DELEGATE.smart selectRecord:^(BOOL userDidCancel, NSString *errorMessage) {
+		[smart selectRecord:^(BOOL userDidCancel, NSString *errorMessage) {
 			
 			// there was an error selecting the record
 			if (errorMessage) {
 				SHOW_ALERT(@"Failed to connect", errorMessage)
 			}
 			
-			// successfully selected record, fetch medications
+			// successfully selected a record
 			else if (!userDidCancel) {
-				self.activeRecord = [APP_DELEGATE.smart activeRecord];
+				self.activeRecord = [smart activeRecord];
 				
+				// show a hint in the login screen about what is happening (may not display on fast servers)
+				[smart displayLoginScreenHint:@"Retrieving medications..."];
+				
+				// fetch medications.
 				[_activeRecord getMedications:^(BOOL success, NSDictionary *userInfo) {
 					if (!success) {
 						SHOW_ALERT(@"Error retrieving medications", [[userInfo objectForKey:SMARTErrorKey] localizedDescription])
 					}
 					else {
 						
-						// success, got the medications
+						// success, got the medications, put into our array and reload the table
 						self.meds = [userInfo objectForKey:SMARTResponseArrayKey];
 						[self.tableView reloadData];
 					}
+					
+					[smart dismissLoginScreenAnimated:YES];
 				}];
 			}
 			
@@ -122,6 +130,7 @@
 			else {
 			}
 			
+			[smart dismissLoginScreenAnimated:YES];
 			[self setRecordButtonTitle:_activeRecord.name];
 		}];
 	}

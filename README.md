@@ -46,3 +46,16 @@ Look at the method `selectRecord:` in `MedListViewController.m`. This method is 
 If record selection was successful, we immediately use the `activeRecord` property to fetch all medications for this record. Medications come back in yet
 another callback and if that was successful as well, we simply assign the returned medications array to our `meds` ivar and reload the table. All done.
 
+
+Help, the app fails to build!
+-----------------------------
+
+The SMART framework contains the [Redland RDF parsing library][redland-ios] as a submodule. For it to be usable, C source code must be cross compiled, which is
+a rather delicate task and Xcode is really bad at handling this particular setup.
+
+If you get **header not found** issues just close the Xcode project and open it again.
+
+If you get complaints that raptor, rasqal or redland have **not been installed**, run the `Redland PURGE C Library` target and then try to run the med sample
+app again. It will take some time again as it has to build all those C-libraries again, let it go through in one swoop.
+
+[redland-ios]: https://github.com/p2/Redland-ObjC
