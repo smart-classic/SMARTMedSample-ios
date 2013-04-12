@@ -18,6 +18,7 @@
 		EE249AA315D5C7D9001A63D7 /* MedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE249AA215D5C7D9001A63D7 /* MedViewController.m */; };
 		EE249AA515D5C955001A63D7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE249AA415D5C955001A63D7 /* Security.framework */; };
 		EE249AC515D5CD56001A63D7 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EE249AC415D5CD56001A63D7 /* libxml2.dylib */; };
+		EECF85501718A36A00596EF5 /* CHImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF854F1718A36A00596EF5 /* CHImageViewController.m */; };
 		EEDD4661162EA48100ECA308 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEDD4660162EA48100ECA308 /* Default-568h@2x.png */; };
 		EEDD4664162EA48700ECA308 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EEDD4663162EA48700ECA308 /* Default.png */; };
 		EEDD4666162EA48C00ECA308 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEDD4665162EA48C00ECA308 /* Default@2x.png */; };
@@ -43,6 +44,8 @@
 		EE249AA415D5C955001A63D7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EE249AC415D5CD56001A63D7 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		EEC9874C16C482600016662D /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		EECF854E1718A36A00596EF5 /* CHImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHImageViewController.h; sourceTree = "<group>"; };
+		EECF854F1718A36A00596EF5 /* CHImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHImageViewController.m; sourceTree = "<group>"; };
 		EEDD4660162EA48100ECA308 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		EEDD4663162EA48700ECA308 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		EEDD4665162EA48C00ECA308 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 				EE249AA115D5C7D9001A63D7 /* MedViewController.h */,
 				EE249AA215D5C7D9001A63D7 /* MedViewController.m */,
 				EE249A8C15D5BD19001A63D7 /* MedViewController.xib */,
+				EECF854E1718A36A00596EF5 /* CHImageViewController.h */,
+				EECF854F1718A36A00596EF5 /* CHImageViewController.m */,
 				EE249A7815D5BD19001A63D7 /* Supporting Files */,
 			);
 			name = "SMART Medications Sample";
@@ -198,6 +203,7 @@
 				EE249A8215D5BD19001A63D7 /* SMAppDelegate.m in Sources */,
 				EE249A8515D5BD19001A63D7 /* MedListViewController.m in Sources */,
 				EE249AA315D5C7D9001A63D7 /* MedViewController.m in Sources */,
+				EECF85501718A36A00596EF5 /* CHImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

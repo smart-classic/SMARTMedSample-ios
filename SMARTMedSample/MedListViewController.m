@@ -21,8 +21,10 @@
  */
 
 #import "MedListViewController.h"
-#import "SMAppDelegate.h"
 #import "MedViewController.h"
+#import "CHImageViewController.h"
+
+#import "SMAppDelegate.h"
 #import "SMServer.h"
 #import "SMRecord+Calls.h"
 #import "SMARTObjects.h"
@@ -30,10 +32,15 @@
 
 @interface MedListViewController ()
 
+@property (nonatomic, strong, readwrite) UIImage *recordPhotograph;
+@property (nonatomic, strong, readwrite) NSArray *meds;
+
 - (void)selectRecord:(id)sender;
 - (void)cancelSelection:(id)sender;
 - (void)setRecordButtonTitle:(NSString *)aTitle;
+
 - (void)showMedication:(SMMedication *)aMedication animated:(BOOL)animated;
+- (void)showPhotograph:(id)sender;
 
 @end
 
@@ -76,7 +83,9 @@
 	self.activeRecord = nil;
 	self.meds = nil;
 	[self.tableView reloadData];
+	
 	[self setRecordButtonTitle:nil];
+	self.recordPhotograph = nil;
 }
 
 /**
@@ -95,6 +104,7 @@
 		self.navigationItem.leftBarButtonItem = activityButton;
 		[activityView startAnimating];
 		
+		
 		// select record
 		[smart selectRecord:^(BOOL userDidCancel, NSString *errorMessage) {
 			
@@ -106,12 +116,10 @@
 			// successfully selected a record
 			else if (!userDidCancel) {
 				self.activeRecord = [smart activeRecord];
+				self.recordPhotograph = nil;
 				
-				// show a hint in the login screen about what is happening (may not display on fast servers)
-				[smart displayLoginScreenHint:@"Retrieving medications..."];
-				
-				// fetch medications.
-				[_activeRecord getMedications:^(BOOL success, NSDictionary *userInfo) {
+				// fetch medications
+				[_activeRecord getMedications:^(BOOL success, NSDictionary *__autoreleasing userInfo) {
 					if (!success) {
 						SHOW_ALERT(@"Error retrieving medications", [[userInfo objectForKey:SMARTErrorKey] localizedDescription])
 					}
@@ -123,6 +131,12 @@
 					}
 					
 					[smart dismissLoginScreenAnimated:YES];
+				}];
+				
+				// fetch the patient photograph
+				[_activeRecord getPhotograph:^(BOOL success, NSDictionary *__autoreleasing userInfo) {
+					UIImage *photo = [userInfo objectForKey:SMARTResponseImageKey];
+					self.recordPhotograph = photo;
 				}];
 			}
 			
@@ -149,13 +163,39 @@
 }
 
 /**
- *  Reverts the navigation bar "connect" button
+ *  Adjusts the navigation bar "connect" button.
  */
 - (void)setRecordButtonTitle:(NSString *)aTitle
 {
 	NSString *title = ([aTitle length] > 0) ? aTitle : @"Connect";
 	UIBarButtonItem *connectButton = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStyleBordered target:self action:@selector(selectRecord:)];
 	self.navigationItem.leftBarButtonItem = connectButton;
+}
+
+/**
+ *  Adds or removes (if photo is nil) the patient image to the navi bar.
+ */
+- (void)setRecordPhotograph:(UIImage *)photo
+{
+	if (_recordPhotograph != photo) {
+		_recordPhotograph = photo;
+		UIBarButtonItem *photoItem = nil;
+		
+		if (photo) {
+			CGRect photoFrame = CGRectZero;
+			photoFrame.size.height = 40.f;
+			photoFrame.size.width = roundf(photo.size.width * (photoFrame.size.height / photo.size.height));		// proportional scaling
+			
+			UIButton *photoButton = [UIButton buttonWithType:UIButtonTypeCustom];
+			[photoButton addTarget:self action:@selector(showPhotograph:) forControlEvents:UIControlEventTouchUpInside];
+			[photoButton setImage:photo forState:UIControlStateNormal];
+			photoButton.frame = photoFrame;
+			
+			photoItem = [[UIBarButtonItem alloc] initWithCustomView:photoButton];
+		}
+		
+		self.navigationItem.rightBarButtonItem = photoItem;
+	}
 }
 
 
@@ -170,6 +210,24 @@
 		MedViewController *viewController = [MedViewController new];
 		viewController.medication = aMedication;
 		[self.navigationController pushViewController:viewController animated:animated];
+	}
+}
+
+
+
+#pragma mark - Patient Photograph
+/**
+ *  Shows the patient photograph in a simple image viewer.
+ */
+- (void)showPhotograph:(id)sender
+{
+	if (_recordPhotograph) {
+		CHImageViewController *imageCtrl = [CHImageViewController new];
+		imageCtrl.image = _recordPhotograph;
+		
+		UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:imageCtrl];
+		
+		[self presentViewController:navi animated:(sender != nil) completion:NULL];
 	}
 }
 

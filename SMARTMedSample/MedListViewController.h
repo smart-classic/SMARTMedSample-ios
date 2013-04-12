@@ -28,7 +28,8 @@
 @interface MedListViewController : UITableViewController
 
 @property (nonatomic, strong) SMRecord *activeRecord;
-@property (nonatomic, strong) NSArray *meds;
+@property (nonatomic, strong, readonly) UIImage *recordPhotograph;
+@property (nonatomic, strong, readonly) NSArray *meds;
 
 - (void)unloadData;
 

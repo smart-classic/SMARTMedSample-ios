@@ -43,14 +43,14 @@
 	// create the handle to our server
 	self.smart = [SMServer serverWithDelegate:self];
 	
+	// handle appearance
+	[[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0.42f green:0.69f blue:0.83f alpha:1.f]];
+	
 	// create the UI
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-	self.listController = [[MedListViewController alloc] initWithStyle:UITableViewStylePlain];
-	UINavigationController *naviController = [[UINavigationController alloc] initWithRootViewController:listController];
-	naviController.navigationBar.tintColor = [UIColor colorWithRed:0.42f green:0.69f blue:0.83f alpha:1.f];
 	
-	self.window.rootViewController = naviController;
+	self.listController = [[MedListViewController alloc] initWithStyle:UITableViewStylePlain];
+	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:listController];
     [self.window makeKeyAndVisible];
 	
     return YES;
