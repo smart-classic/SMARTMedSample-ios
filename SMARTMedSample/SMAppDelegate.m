@@ -44,7 +44,12 @@
 	self.smart = [SMServer serverWithDelegate:self];
 	
 	// handle appearance
-	[[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0.42f green:0.69f blue:0.83f alpha:1.f]];
+	if ([UINavigationBar instancesRespondToSelector:@selector(setBarTintColor:)]) {
+		[[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.42f green:0.69f blue:0.83f alpha:1.f]];
+	}
+	else {
+		[[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0.42f green:0.69f blue:0.83f alpha:1.f]];
+	}
 	
 	// create the UI
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

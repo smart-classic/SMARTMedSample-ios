@@ -70,6 +70,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	// iOS 7 layout
+	if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+		self.edgesForExtendedLayout = UIRectEdgeAll;
+		self.automaticallyAdjustsScrollViewInsets = YES;
+	}
+	
 	[self configureView];
 }
 

@@ -274,6 +274,8 @@
 		EE249A9215D5BD19001A63D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMARTMedSample/SMARTMedSample-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)\"/**";
@@ -281,6 +283,7 @@
 				OTHER_CFLAGS = "-DDEBUG";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)\"/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -289,12 +292,15 @@
 		EE249A9315D5BD19001A63D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMARTMedSample/SMARTMedSample-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)\"/**";
 				INFOPLIST_FILE = "$(SRCROOT)/SMARTMedSample/SMARTMedSample-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)\"/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -328,12 +334,15 @@
 		EE70EAF71676DDDF0066EB8F /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMARTMedSample/SMARTMedSample-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)\"/**";
 				INFOPLIST_FILE = "$(SRCROOT)/SMARTMedSample/SMARTMedSample-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)\"/**";
 				WRAPPER_EXTENSION = app;
 			};
