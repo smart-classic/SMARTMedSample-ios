@@ -121,12 +121,12 @@
 				// fetch medications
 				[_activeRecord getMedications:^(BOOL success, NSDictionary *__autoreleasing userInfo) {
 					if (!success) {
-						SHOW_ALERT(@"Error retrieving medications", [[userInfo objectForKey:SMARTErrorKey] localizedDescription])
+						SHOW_ALERT(@"Error retrieving medications", [userInfo[SMARTErrorKey] localizedDescription])
 					}
 					else {
 						
 						// success, got the medications, put into our array and reload the table
-						self.meds = [userInfo objectForKey:SMARTResponseArrayKey];
+						self.meds = userInfo[SMARTResponseArrayKey];
 						[self.tableView reloadData];
 					}
 					
@@ -135,7 +135,7 @@
 				
 				// fetch the patient photograph
 				[_activeRecord getPhotograph:^(BOOL success, NSDictionary *__autoreleasing userInfo) {
-					UIImage *photo = [userInfo objectForKey:SMARTResponseImageKey];
+					UIImage *photo = userInfo[SMARTResponseImageKey];
 					self.recordPhotograph = photo;
 				}];
 			}
@@ -258,7 +258,7 @@
 		}
 		
 		// display the name
-		SMMedication *med = [_meds objectAtIndex:indexPath.row];
+		SMMedication *med = _meds[indexPath.row];
 		cell.textLabel.text = med.drugName.title;
 		cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", med.frequency.value, med.frequency.unit];
 		return cell;
@@ -275,7 +275,7 @@
 		return;
 	}
 	
-	SMMedication *selected = [_meds objectAtIndex:indexPath.row];
+	SMMedication *selected = _meds[indexPath.row];
     [self showMedication:selected animated:YES];
 }
 
