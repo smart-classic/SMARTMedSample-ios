@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0460"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -18,6 +18,20 @@
                BuildableName = "SMART Medications Sample.app"
                BlueprintName = "SMART Medications Sample"
                ReferencedContainer = "container:SMARTMedSample-ios.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EEC9C59415CB2EA800B7C568"
+               BuildableName = "libSMART.a"
+               BlueprintName = "SMART"
+               ReferencedContainer = "container:SMARTFramework-ios/SMARTFramework.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

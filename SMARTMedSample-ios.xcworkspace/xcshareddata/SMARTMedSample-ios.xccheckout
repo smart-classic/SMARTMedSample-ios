@@ -5,15 +5,15 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>A68B1CED-79BD-4B13-BD2D-CDD4CCEC6E88</string>
+	<string>0B7C0C7E-535C-49C0-B04B-76E84BDDE2A2</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SMARTMedSample-ios</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>287A82D1-1DE3-4190-A04C-201C52BC8579</key>
+		<string>https://github.com/smart-platforms/SMARTMedSample-ios.git</string>
 		<key>4EDD08A1-5284-43E5-A8ED-D1BEF33505F1</key>
 		<string>git://github.com/chb/MPOAuth.git</string>
-		<key>D75B8320-AD33-498B-A4E7-4CE4283FC722</key>
-		<string>ssh://github.com/chb/SMARTMedSample-ios.git</string>
 		<key>F93A67C1-87DC-4E76-9B14-93F7F9527ACD</key>
 		<string>git://github.com/chb/SMARTFramework-ios.git</string>
 		<key>FC0B971F-91B7-4542-9CAE-27C45385F590</key>
@@ -23,21 +23,21 @@
 	<string>SMARTMedSample-ios.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>287A82D1-1DE3-4190-A04C-201C52BC8579</key>
+		<string>..</string>
 		<key>4EDD08A1-5284-43E5-A8ED-D1BEF33505F1</key>
 		<string>../SMARTFramework-ios/MPOAuth</string>
-		<key>D75B8320-AD33-498B-A4E7-4CE4283FC722</key>
-		<string>..</string>
 		<key>F93A67C1-87DC-4E76-9B14-93F7F9527ACD</key>
 		<string>../SMARTFramework-ios</string>
 		<key>FC0B971F-91B7-4542-9CAE-27C45385F590</key>
 		<string>../SMARTFramework-ios/Redland-ObjC</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/chb/SMARTMedSample-ios.git</string>
+	<string>https://github.com/smart-platforms/SMARTMedSample-ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D75B8320-AD33-498B-A4E7-4CE4283FC722</string>
+	<string>287A82D1-1DE3-4190-A04C-201C52BC8579</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -68,7 +68,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D75B8320-AD33-498B-A4E7-4CE4283FC722</string>
+			<string>287A82D1-1DE3-4190-A04C-201C52BC8579</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SMARTMedSample-ios</string>
 		</dict>
